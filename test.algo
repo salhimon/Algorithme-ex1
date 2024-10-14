@@ -1,0 +1,29 @@
+Algo: lire_une_phrase
+//LES VARIABLE
+var
+      str : char = "On vous demande d'écrire un algorithme qui lit une phrase.";
+      voyelle = ['a','e','i','o','u','y','A','E','I','O','U','Y'];
+      mot := 0;
+      voy:=0;
+      car:=0;
+begin
+
+  Pour i=1 i<longueur(str); i++
+    //pour compter nombre de mots
+    si (str[i] == ' ' ou str[i] == '.') alors
+        mot ++;
+    fin si
+    //pour compter nombre de caractere
+
+    si (str[i] != ' ' ou str[i]!='.') alors
+        car++;
+    fin si
+    //Pour compter nombre de voyelles
+    si  (str[i] in voyelle) alors
+        voy++;
+    fin si
+  Fin Pour
+  write("Nombre de mots est:" mot);
+  write("Nombre de caracteres est:" car);
+  write("Nombre de voyelles est:" voy);
+end
